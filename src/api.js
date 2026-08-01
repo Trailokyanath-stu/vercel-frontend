@@ -6,7 +6,7 @@
 // In production, this React app's build output is served BY that
 // same Express server, so "/api" continues to work unchanged.
 
-const API_BASE = '/api';
+const API_BASE = 'https://grand-palette-backend.onrender.com/api';
 
 async function request(path, options = {}) {
   const res = await fetch(`${API_BASE}${path}`, {
