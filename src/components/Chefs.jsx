@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ChefDetailModal from "./ChefDetailModal.jsx";
-import "../styles/chefs.css";
+import "../styles/Chefs.css";
 
 export default function Chefs() {
   const [selectedChef, setSelectedChef] = useState(null);
