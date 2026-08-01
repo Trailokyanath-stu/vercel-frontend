@@ -1,7 +1,9 @@
 // src/components/Footer.jsx
+
 const QUICK_LINKS = [
   { href: '#about', label: 'About' },
   { href: '#services', label: 'Services' },
+  { href: '#chefs', label: 'Our Chefs' },
   { href: '#menu', label: 'Menu' },
   { href: '#features', label: 'Why Us' },
   { href: '#reviews', label: 'Reviews' },
@@ -9,14 +11,15 @@ const QUICK_LINKS = [
 ];
 
 const SOCIALS = [
-  { label: 'Facebook', symbol: 'f' },
-  { label: 'Instagram', symbol: '◎' },
-  { label: 'Twitter / X', symbol: '𝕏' },
-  { label: 'WhatsApp', symbol: '☏' },
+  { label: 'Facebook', symbol: 'f', url: 'https://facebook.com' },
+  { label: 'Instagram', symbol: '◎', url: 'https://instagram.com' },
+  { label: 'Twitter / X', symbol: '𝕏', url: 'https://x.com' },
+  { label: 'WhatsApp', symbol: '☏', url: 'https://wa.me/917848019826' },
 ];
 
 export default function Footer() {
   function handleAnchorClick(e, href) {
+    if (window.location.pathname !== '/') return;
     e.preventDefault();
     const target = document.querySelector(href);
     if (!target) return;
@@ -56,7 +59,14 @@ export default function Footer() {
           <h4>Follow Us</h4>
           <div className="social-icons">
             {SOCIALS.map((s) => (
-              <a key={s.label} href="#" aria-label={s.label} className="social-icon">
+              <a
+                key={s.label}
+                href={s.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={s.label}
+                className="social-icon"
+              >
                 {s.symbol}
               </a>
             ))}

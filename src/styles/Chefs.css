@@ -1,0 +1,119 @@
+.chefs-section {
+  padding: 100px 8%;
+  background: #111;
+  color: white;
+}
+
+.chefs-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: auto auto 60px;
+}
+
+.chefs-heading span {
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.chefs-heading h2 {
+  margin: 15px 0;
+  font-size: 45px;
+}
+
+.chefs-heading p {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+.chefs-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.chef-card {
+  overflow: hidden;
+  background: #1c1c1c;
+  border: 1px solid #333;
+  border-radius: 18px;
+  transition: 0.3s;
+}
+
+.chef-card:hover {
+  transform: translateY(-10px);
+  border-color: #d4af37;
+}
+
+.chef-image {
+  width: 100%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.chef-content {
+  padding: 25px;
+}
+
+.chef-role {
+  color: #d4af37;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.chef-content h3 {
+  font-size: 25px;
+  margin: 10px 0;
+}
+
+.experience {
+  color: #ddd;
+}
+
+.chef-about {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+.chef-content h4 {
+  margin-bottom: 12px;
+}
+
+.specialty-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.specialty-list span {
+  padding: 7px 12px;
+  background: #292929;
+  color: #d4af37;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+
+  .chefs-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .chefs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .chefs-heading h2 {
+    font-size: 34px;
+  }
+
+}

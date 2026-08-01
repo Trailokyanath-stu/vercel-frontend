@@ -40,3 +40,15 @@ export function submitContactMessage(payload) {
     body: JSON.stringify(payload),
   });
 }
+
+export function submitOrder(payload) {
+  return request('/orders', {
+    method: 'POST',
+    body: JSON.stringify(payload),
+  });
+}
+
+export function fetchOrders(email) {
+  const query = email ? `?email=${encodeURIComponent(email)}` : '';
+  return request(`/orders${query}`);
+}
